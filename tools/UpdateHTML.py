@@ -59,7 +59,7 @@ for root, dirs, files in os.walk("..\\www\\NSPs"):
              fileSizeBytes = os.stat(fileDir).st_size
              filter1 = fileDir.replace(" ", "%20") # Making the directory string we gathered HTML friendly
              filter2 = filter1.replace("\\", "/")
-             filter3 = filter2.replace("../.", "")
+             filter3 = filter2.replace("../www", "")
              txt.write('        {\n')
              txt.write(f'            "url": "{filter3}",\n')
              txt.write(f'            "size": {fileSizeBytes}\n')
