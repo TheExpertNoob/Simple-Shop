@@ -52,7 +52,7 @@ txt.write('    "files": [\n')
 # Filter them for switch files
 # Make the directory listing HTML friendly TODO: Add more filtering or import a HTML encoding library
 # Saves our URL directory list and how big the file is in our index file
-for root, dirs, files in os.walk("..\www"):
+for root, dirs, files in os.walk("..\\www\\NSPs"):
     for file in files:
         if file.endswith(ext):
              fileDir = os.path.join(root, file)
