@@ -17,7 +17,8 @@ HAUTH is the Host Authorization string. You can obtain this by enabling Forensic
 
 
 <h3>:open_file_folder: www/NSPs:</h3>
-<p>Place your NSPs in this folder. Organized it however you want.</p>
+<p>Place your NSPs in this folder. Organized it however you want.<br>
+Oh. Also, delete the example NSP files. They are just example placeholders.</p>
 
 <p>&nbsp;</p>
 
