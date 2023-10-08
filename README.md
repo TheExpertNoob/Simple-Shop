@@ -5,7 +5,7 @@
 
 <h2>Some changes need to be made for your use case.</h2>
 <h3>:page_with_curl: www/.htaccess:</h1>
-<p>This is a dual user usage. User 1 has the login of User "Join" and Password "gDrive", case sensitive. You can change this as you see fit and use a <a href="https://base64.io/">base64</a> generator to get the base64 needed. Be sure to change all instances of the base64 code that match for User 1. You will also want to change it for User 2.<br><br>
+<p>This is a dual user usage. User 1 has the login of User "Join" and Password "gDrive", case sensitive. You can change this as you see fit and use a <a href="https://base64.io/">base64</a> generator to get the base64 needed. Be sure to change all instances of the base64 code that match for User 1. You will also want to change it for User 2. User 2 is setup for local drive files.<br><br>
 If you want to have multiple users, use pipe |.<br>
 ex.
 
