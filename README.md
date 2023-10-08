@@ -1,5 +1,5 @@
 <h1>Simple Shop for Simple Jack</h1>
-<h3>Files to get you started on building a secure(ish) shop on top of a WAMP/LAMP setup.</h3>
+<h3>Files to get you started on building a secure(ish) shop on top of a WAMP setup.</h3>
 
 <p>&nbsp;</p>
 
