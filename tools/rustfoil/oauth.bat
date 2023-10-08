@@ -1,0 +1,1 @@
+CMD /k rustfoil.exe --tinfoil-auth

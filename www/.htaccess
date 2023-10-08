@@ -1,0 +1,22 @@
+RewriteEngine On
+
+# User 1 with Authorization: Sm9pbjpnRHJpdmU= (Join:gDrive) Used for rustfoil gdrive index.
+RewriteCond %{HTTP:Authorization} ^Basic\s(Sm9pbjpnRHJpdmU=)$
+RewriteCond %{HTTP:HAUTH} ^HAUTHstringHere$
+RewriteRule ^.*$ index.tfl [L]
+
+# User 2 with Authorization: UGVyc29uYWw6RmlsZXM= (Personal:Files) Used for files stored in NSPs folder
+RewriteCond %{HTTP:Authorization} ^Basic\s(UGVyc29uYWw6RmlsZXM=)$
+RewriteCond %{HTTP:HAUTH} ^HAUTHstringHere$
+RewriteRule ^$ games.tfl [L]
+
+# Apply the RewriteRule to User 2
+RewriteCond %{HTTP:Authorization} ^Basic\s(UGVyc29uYWw6RmlsZXM=)$
+RewriteCond %{REQUEST_URI} !^/games.tfl [NC]
+RewriteRule ^(.+)$ $1 [L]
+
+# If neither header matches, redirect to crayola.com
+RewriteCond %{HTTP:Authorization} !^Basic\s(Sm9pbjpnRHJpdmU=) [OR]
+RewriteCond %{HTTP:Authorization} !^Basic\s(UGVyc29uYWw6RmlsZXM=)
+RewriteCond %{HTTP:HAUTH} !^HAUTHstringHere$
+RewriteRule ^ https://crayola.com [R=301,L]
